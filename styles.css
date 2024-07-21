@@ -66,50 +66,47 @@ body {
 .btns{
     width: 542px; left: 0px; top: 374px; position: absolute; justify-content: flex-start; align-items: center; gap: 16px; display: inline-flex
 }
-.btn1{
-    width: 263px; 
-    height: 72px; 
-    padding: 20px; 
-    background: #1F1F1F; 
-    border-radius: 66px; 
-    flex-direction: column; 
-    justify-content: center; 
-    align-items: center; 
-    display: inline-flex
-}
-.btn1-label{
-    width: 165px; 
-    text-align: center; 
-    color: white; 
-    font-size: 16px; 
-    font-family: Golos Text; 
-    font-weight: 500; 
-    line-height: 20.80px; 
-    word-wrap: break-word
-}
-.btn2{
+.btn1, .btn2 {
     width: 263px;
-    height: 72px; 
-    padding: 20px; 
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
+    height: 72px;
+    padding: 20px;
     border-radius: 66px;
-    border: 2px #1F1F1F solid; 
-    background: none;
-    flex-direction: column; 
-    justify-content: center; 
-    align-items: center; 
-    display: inline-flex
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
-.btn2-label{
-    width: 165px; 
-    text-align: center; 
-    color: #1F1F1F; 
-    font-size: 16px; 
-    font-family: Golos Text; 
-    font-weight: 500; 
-    line-height: 20.80px; 
-    word-wrap: break-word
+.btn1 {
+    background: #1F1F1F;
+    border: none;
+    cursor: pointer;
+}
+.btn1 .btn1-label {
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+}
+.btn2 {
+    background: none;
+    border: 2px solid #1F1F1F;
+    cursor: pointer;
+}
+.btn2 .btn2-label {
+    color: #1F1F1F;
+    font-size: 16px;
+    font-weight: 500;
+}
+.btn1:hover {
+    background: #FFB800;
+}
+.btn1:hover .btn1-label {
+    color: #1F1F1F;
+}
+.btn2:hover {
+    background: #1F1F1F;
+}
+.btn2:hover .btn2-label {
+    color: white;
 }
 .section {
     display: flex;
@@ -392,7 +389,6 @@ del{
     justify-content: end;
     align-items: center;
     text-align: center;
-    
 }
 .carousel span {
     cursor: pointer;
@@ -405,9 +401,13 @@ del{
     width: 44px;
     height: 44px;
     margin: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .carousel span:hover {
-    color: #007BFF;
+    background: #FBCE51;
+    border-color: #FBCE51;
 }
 .carousel div {
     font-size: 1.2em;
